@@ -1,32 +1,14 @@
-#include<stdio.h>
+#include <stdio.h>
+int main() {
+    int x=10; // Variable in main block
+    printf("Main block: x = %d\n", x);
+    {
+        int y=20; // Variable in inner block
+        printf("Inner block: y = %d\n", y);
+        printf("Inner block: x = %d\n", x); 
+    }
+    // Trying to access y here will cause an error
+    // printf("Main block: y = %d\n", y);
+    return 0;
 
-int main(){
-
-int x1,x2,x3,y1,y2,y3;
-int area;
-  printf("enter x1: ");
-  scanf("%d", &x1);
-    printf("enter x2 : ");
-  scanf("%d", &x2);
-    printf("enter x3: ");
-  scanf("%d", &x3);
-  printf("enter y1: ");
-  scanf("%d", &y1);
-    printf("enter y2: ");
-  scanf("%d", &y2);
-    printf("enter y3: ");
-  scanf("%d", &y3);
-area=x1 *(y1-y2)+ x2*(y3-y1)+x3*(y1-y2);
-printf("area = %d",area);
-
-if (area==0)
-{
- printf("\nthe given points are collinear\n");
-}
-else{
-  printf("\nthe given points are not collinear \n");
-}
-
-
-return 0;
 }

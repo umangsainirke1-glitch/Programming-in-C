@@ -1,36 +1,17 @@
-#include<stdio.h>
+#include <stdio.h>
+int globalVar = 10;
+void function1() {
+    printf("Function 1: Global Variable = %d\n", globalVar);
+}
+void function2() {
+    globalVar += 5;
+    printf("Function 2: Global Variable after increment = %d\n", globalVar);
+}
+int main() {
+    printf("Main Function: Initial Global Variable = %d\n", globalVar);
+    function1();
+    function2();
+    printf("Main Function: Global Variable after function calls = %d\n", globalVar);
+    return 0;
 
-int main(){
-
-  
-  int number, positive = 0, negative = 0, zero = 0;
-  char another = 'Y';
-
-  do
-  {
-    printf("Enter a number: ");
-    scanf("%d", &number);
-
-    if (number > 0)
-    {
-      positive++;
-    }
-    else if (number < 0)
-    {
-      negative++;
-    }
-    else
-    {
-      zero++;
-    }
-
-    printf("Do you want to Continue ? ");
-    scanf(" %c", &another);
-
-  } while (another == 'y' || another == 'Y');
-
-  printf("Positive Numbers :%d\n", positive);
-  printf("Negative  Numbers :%d\n", negative);
-  printf("zero Numbers :%d\n", zero);
-return 0;
 }
