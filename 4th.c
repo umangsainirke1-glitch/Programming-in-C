@@ -1,13 +1,16 @@
-#include<stdio.h>
-#include<conio.h>
-int main()
-{
-    int i;
-    float pop=100000;
-    //for-loop for 10 years
-    for(i=1;i<=10;i++)
-    {
-        pop = pop - pop*0.1; //10 % of population
-        printf("%d years ago : %d\n",i, (int)pop);
-    }
+#include <stdio.h>
+void function() {
+    static int staticVar = 0; // Static local variable
+    staticVar++;
+    printf("Static Variable = %d\n", staticVar);
+}
+int main() {
+    function(); 
+    printf("Call 1\n");
+    function(); 
+    printf("Call 2\n");
+    function(); 
+    printf("Call 3\n");
+    return 0;
+
 }
