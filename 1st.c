@@ -1,37 +1,36 @@
-#include <stdio.h>
+#include<stdio.h>
 
-int main()
-{
-  printf("*** TO DETERMINE WHETHER GIVEN SIDES CAN FORM A TRIANGLE OR NOT ***\n");
-  int side_1, side_2, side_3;
-  printf("enter side 1: ");
-  scanf("%d", &side_1);
-  printf("enter side 2: ");
-  scanf("%d", &side_2);
-  printf("enter side 3: ");
-  scanf("%d", &side_3);
+int main(){
 
-  if (side_1 + side_2 > side_3 && side_2 + side_3 > side_1 && side_3 + side_1 > side_2)
-  {
-    printf("The given sides can form a TRIANGLE\n");
-  }
-  else
-  {
-    printf("Cannot form a triangle\n");
-  }
   
-  if(side_1==side_2 && side_2==side_3 && side_1==side_3){
-    printf("equilateral triangle\n");
-   
-  }
-  
-else if(side_1==side_2 || side_2==side_3 || side_1==side_3){
-  printf("isosceles triangle\n");
+  int number, positive = 0, negative = 0, zero = 0;
+  char another = 'Y';
 
-}
-else  {printf("scalene triangle\n");
-}
- 
+  do
+  {
+    printf("Enter a number: ");
+    scanf("%d", &number);
 
-  return 0;
+    if (number > 0)
+    {
+      positive++;
+    }
+    else if (number < 0)
+    {
+      negative++;
+    }
+    else
+    {
+      zero++;
+    }
+
+    printf("Do you want to Continue ? ");
+    scanf(" %c", &another);
+
+  } while (another == 'y' || another == 'Y');
+
+  printf("Positive Numbers :%d\n", positive);
+  printf("Negative  Numbers :%d\n", negative);
+  printf("zero Numbers :%d\n", zero);
+return 0;
 }
