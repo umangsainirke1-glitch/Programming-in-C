@@ -1,37 +1,13 @@
 #include <stdio.h>
-
-int main()
+void main()
 {
-  printf("*** TO DETERMINE WHETHER GIVEN SIDES CAN FORM A TRIANGLE OR NOT ***\n");
-  int side_1, side_2, side_3;
-  printf("enter side 1: ");
-  scanf("%d", &side_1);
-  printf("enter side 2: ");
-  scanf("%d", &side_2);
-  printf("enter side 3: ");
-  scanf("%d", &side_3);
+    int a, b;
+    printf("Enter two integers: ");
+    scanf("%d %d", &a, &b);
 
-  if (side_1 + side_2 > side_3 && side_2 + side_3 > side_1 && side_3 + side_1 > side_2)
-  {
-    printf("The given sides can form a TRIANGLE\n");
-  }
-  else
-  {
-    printf("Cannot form a triangle\n");
-  }
-  
-  if(side_1==side_2 && side_2==side_3 && side_1==side_3){
-    printf("equilateral triangle\n");
-   
-  }
-  
-else if(side_1==side_2 || side_2==side_3 || side_1==side_3){
-  printf("isosceles triangle\n");
+    printf("Bitwise AND of %d and %d is: %d\n", a, b, a & b);
+    printf("Bitwise OR of %d and %d is: %d\n", a, b, a | b);
+    printf("Bitwise NOT of %d is: %d\n", a, ~a);
+    printf("Bitwise NOT of %d is: %d\n", b, ~b);
 
-}
-else  {printf("scalene triangle\n");
-}
- 
-
-  return 0;
 }

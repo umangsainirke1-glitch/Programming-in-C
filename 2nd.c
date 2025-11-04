@@ -1,37 +1,13 @@
-#include<stdio.h>
-
-int main(){
-
-float height,weight,BMI;
-printf("enter height (in metres): ");
-scanf("%f",&height);
-printf("enter weight (in kgs): ");
-scanf("%f",&weight);
-
-BMI=(float) weight / (height * height) ;
-printf("%f\n", BMI);
-if(BMI<15){
-  printf("STARVATION\n");
-}
-if (BMI>15.1 && BMI<17.5)
+#include <stdio.h>
+int main()
 {
-  printf("ANOREXIC\n");}
+    int a, leftShift, rightShift;
+    printf("Enter an integer: ");
+    scanf("%d", &a);
 
-  if(BMI>17.6 && BMI<18.5){
-  printf("UNDERWEIGHT\n");
-  }
-   if(BMI>18.6 && BMI<24.9){
-  printf("IDEAL\n");
-  }
-   if(BMI>25 && BMI<25.9){
-  printf("OVERWEIGHT\n");
-  }
-   if(BMI>30 && BMI<39.9){
-  printf("OBESE\n");
-  }
-   if(BMI>40){
-  printf("MORBIDITY OBESE\n");
-  }
+    leftShift = a << 1;
+    rightShift = a >> 1; 
 
-return 0;
+    printf("Left shift of %d by 1 is: %d\n", a, leftShift);
+    printf("Right shift of %d by 1 is: %d\n", a, rightShift);
 }
